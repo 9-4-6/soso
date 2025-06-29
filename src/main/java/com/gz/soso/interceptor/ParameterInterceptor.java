@@ -1,7 +1,7 @@
 package com.gz.soso.interceptor;
 
 
-import cn.hutool.json.JSONUtil;
+import com.gz.soso.util.JsonUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -51,7 +51,7 @@ public class ParameterInterceptor {
             log.info("{}.{} request parameter is: {}",
                     currentMethod.getDeclaringClass().getName(),
                     currentMethod.getName(),
-                    isFilter(args[0]) ? StringUtils.EMPTY : JSONUtil.toJsonStr(args[0]));
+                    isFilter(args[0]) ? StringUtils.EMPTY : JsonUtils.toJson(args[0]));
         }
         return proceedingJoinPoint.proceed();
     }
