@@ -8,10 +8,7 @@ import com.gz.soso.pojo.webRes.WebResponseBuilder;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
@@ -20,13 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
     private final UnifiedAuthService unifiedAuthService;
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public WebResponse<LoginVO> login(@RequestBody LoginDTO loginDTO) {
         // 执行认证
         Authentication authentication = unifiedAuthService.executeAuthenticate(loginDTO);
-        // 生成令牌
+        // todo 生成令牌
         //String token = tokenProvider.generateToken(authentication);
-
+        // todo 存储redis key:userId + platformId + uuid  value:用户信息
         return WebResponseBuilder.success("登录成功");
     }
 }

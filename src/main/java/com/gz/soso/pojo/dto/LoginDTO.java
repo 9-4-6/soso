@@ -9,6 +9,10 @@ public class LoginDTO implements Serializable {
     @Serial
     private static final long serialVersionUID = 6919117078169429888L;
     /**
+     * 平台类型 1：iOS，2：Android，3：web
+     */
+    private Integer platformId;
+    /**
      * 登录类型- 0：密码 （1：短信验证码 2 微信授权 等 ）
      *
      * */
