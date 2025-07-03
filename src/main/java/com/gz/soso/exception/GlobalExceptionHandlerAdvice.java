@@ -1,7 +1,7 @@
 package com.gz.soso.exception;
 import com.gz.soso.pojo.enums.WebResponseEnum;
-import com.gz.soso.pojo.webRes.WebResponse;
-import com.gz.soso.pojo.webRes.WebResponseBuilder;
+import com.gz.soso.pojo.common.WebResponse;
+import com.gz.soso.pojo.common.WebResponseBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;

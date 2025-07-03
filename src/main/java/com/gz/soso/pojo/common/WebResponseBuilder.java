@@ -1,4 +1,4 @@
-package com.gz.soso.pojo.webRes;
+package com.gz.soso.pojo.common;
 
 
 import com.gz.soso.pojo.enums.WebResponseEnum;
@@ -26,7 +26,7 @@ public class WebResponseBuilder {
      * @param data 响应数据
      * @return
      */
-    public static <T> WebResponse success(String code, String msg, T data){
+    public static <T> WebResponse success(int code, String msg, T data){
         return WebResponse.builder().success(true).code(code)
                 .msg(msg).data(data).build();
     }
@@ -49,7 +49,7 @@ public class WebResponseBuilder {
      * @param msg 响应消息
      * @return
      */
-    public static <T> WebResponse fail(String code, String msg){
+    public static <T> WebResponse fail(int code, String msg){
         return WebResponse.builder().success(false).code(code)
                 .msg(msg).build();
     }

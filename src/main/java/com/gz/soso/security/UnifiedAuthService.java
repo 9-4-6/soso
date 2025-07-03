@@ -1,7 +1,10 @@
-package com.gz.soso.component;
+package com.gz.soso.security;
 
 import com.gz.soso.exception.ServiceException;
+import com.gz.soso.pojo.security.AccessToken;
 import com.gz.soso.pojo.dto.LoginDTO;
+import com.gz.soso.pojo.security.CustomUserDetails;
+import com.gz.soso.pojo.vo.LoginVO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -19,6 +22,26 @@ public class UnifiedAuthService {
 
     private final AuthenticationProviderRegistry providerRegistry;
 
+    private final JwtComponent jwtComponent;
+
+
+
+
+    public LoginVO login(LoginDTO loginDTO) {
+        // 执行认证
+        Authentication authentication = executeAuthenticate(loginDTO);
+        CustomUserDetails customUserDetails = (CustomUserDetails) authentication.getPrincipal();
+        // 生成令牌
+        AccessToken accessToken = jwtComponent.doGenerateToken(customUserDetails.getId());
+        // todo 存储redis key:userId + platformId + uuid  value:用户信息
+        return LoginVO.builder()
+                .id(customUserDetails.getId())
+                .name(customUserDetails.getName())
+                .accessToken(accessToken.getAccessToken())
+                .expirationTime(accessToken.getExpiredTime())
+                .build();
+
+    }
     /**
      * 执行认证
      * @param loginDTO

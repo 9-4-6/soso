@@ -1,4 +1,4 @@
-package com.gz.soso.component;
+package com.gz.soso.security;
 
 import com.gz.soso.Annotation.LoginProvider;
 import org.springframework.beans.factory.annotation.Autowired;
