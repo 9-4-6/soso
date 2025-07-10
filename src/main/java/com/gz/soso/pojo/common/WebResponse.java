@@ -1,4 +1,4 @@
-package com.gz.soso.pojo.webRes;
+package com.gz.soso.pojo.common;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -19,7 +19,7 @@ public class WebResponse<T> {
      * 响应码
      */
     @JsonProperty
-    private String code;
+    private int code;
     /**
      * 响应消息
      */
