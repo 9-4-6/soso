@@ -1,4 +1,4 @@
-package com.gz.soso.Annotation;
+package com.gz.soso.annotation;
 
 import org.springframework.stereotype.Component;
 

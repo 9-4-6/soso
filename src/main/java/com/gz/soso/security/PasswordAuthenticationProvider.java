@@ -1,7 +1,7 @@
 package com.gz.soso.security;
 
 import cn.hutool.core.lang.Assert;
-import com.gz.soso.Annotation.LoginProvider;
+import com.gz.soso.annotation.LoginProvider;
 import com.gz.soso.exception.ServiceException;
 import com.gz.soso.pojo.security.CustomUserDetails;
 import lombok.RequiredArgsConstructor;

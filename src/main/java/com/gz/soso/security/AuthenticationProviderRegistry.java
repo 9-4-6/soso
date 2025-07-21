@@ -1,6 +1,6 @@
 package com.gz.soso.security;
 
-import com.gz.soso.Annotation.LoginProvider;
+import com.gz.soso.annotation.LoginProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.stereotype.Component;
