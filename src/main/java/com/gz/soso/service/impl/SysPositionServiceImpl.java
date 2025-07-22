@@ -49,7 +49,7 @@ public class SysPositionServiceImpl extends ServiceImpl<SysPositionMapper, SysPo
 
     @Override
     public Long add(PostAddDTO dto) {
-        //部门名称是唯一
+        //岗位名称是唯一
         long count = this.count(new LambdaQueryWrapper<SysPosition>().eq(SysPosition::getPositionName, dto.getPositionName()));
         Assert.isTrue(count == CommonConstant.ZERO,()->new ServiceException("岗位名称重复"));
         //新增
@@ -64,7 +64,7 @@ public class SysPositionServiceImpl extends ServiceImpl<SysPositionMapper, SysPo
 
     @Override
     public void updatePost(PostUpdateDTO dto) {
-        //部门名称是唯一，排除本身
+        //岗位名称是唯一，排除本身
         long count = this.count(new LambdaQueryWrapper<SysPosition>()
                 .eq(SysPosition::getPositionName, dto.getPositionName())
                 .ne(SysPosition::getId,dto.getId()));

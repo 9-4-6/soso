@@ -9,6 +9,16 @@ import com.gz.soso.pojo.enums.WebResponseEnum;
 public class WebResponseBuilder {
     /**
      * 构建处理成功请求
+     * @param <T>
+     * @return
+     */
+    public static  WebResponse success(){
+        WebResponseEnum success = WebResponseEnum.SUCCESS;
+        return WebResponse.builder().success(true).code(success.getCode())
+                .msg(success.getMsg()).data(null).build();
+    }
+    /**
+     * 构建处理成功请求
      * @param data
      * @param <T>
      * @return
