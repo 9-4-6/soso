@@ -25,13 +25,13 @@ public class SysDept implements Serializable {
      * 部门名称
      */
     @TableField(value = "dept_name")
-    private String dept_name;
+    private String deptName;
 
     /**
      * 排序
      */
     @TableField(value = "sort_order")
-    private Integer sort_order;
+    private Integer sortOrder;
 
     /**
      * 备注
@@ -49,32 +49,31 @@ public class SysDept implements Serializable {
      * 创建人
      */
     @TableField(value = "create_user")
-    private Long create_user;
+    private Long createUser;
 
     /**
      * 创建时间
      */
     @TableField(value = "create_time")
-    private Date create_time;
+    private Date createTime;
 
     /**
      * 修改人
      */
     @TableField(value = "update_user")
-    private Long update_user;
+    private Long updateUser;
 
     /**
      * 修改时间
      */
     @TableField(value = "update_time")
-    private Date update_time;
+    private Date updateTime;
 
     /**
      * 是否删除，默认0，0-否；1-是
      */
     @TableField(value = "deleted")
-    private Boolean deleted;
+    private Integer deleted;
 
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
+
 }
