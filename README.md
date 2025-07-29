@@ -19,6 +19,8 @@
 * 内容管理 -- 待开发
 * 系统管理 -- 已完成
 * 前端项目 -- 开发中
+  <img width="1909" height="841" alt="image" src="https://github.com/user-attachments/assets/7aeb85eb-b40e-4341-aec7-c8de69c04dc5" />
+
   https://github.com/9-4-6/soso-web
 
 
