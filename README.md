@@ -18,9 +18,10 @@
 * 主页  -- 待开发 
 * 内容管理 -- 待开发
 * 系统管理 -- 已完成
-* 前端项目 -- 开发中
+## 系统展示
+* 登录
   <img width="1909" height="841" alt="image" src="https://github.com/user-attachments/assets/7aeb85eb-b40e-4341-aec7-c8de69c04dc5" />
-
-  https://github.com/9-4-6/soso-web
-
+* 主页
+  <img width="1837" height="809" alt="image" src="https://github.com/user-attachments/assets/cc6a0ca3-2fb2-4e40-9c1b-67bb383ecc03" />
+  
 
